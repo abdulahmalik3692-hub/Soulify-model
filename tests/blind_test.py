@@ -39,8 +39,8 @@ print()
 
 for i, text in enumerate(test_inputs, 1):
     result     = classifier(text[:512])[0]
-    predicted  = result['label']
-    confidence = result['score']
+    predicted  = result[0]['label']
+    confidence = result[0]['score']
     print(f"#{i:02d} Predicted : {predicted.upper()}")
     print(f"     Confidence: {confidence:.3f}")
     print(f"     Input     : {text[:60]}")
